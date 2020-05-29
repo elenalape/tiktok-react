@@ -31,7 +31,7 @@ class UppyComponent extends React.Component {
 					video_resized: {
 						use: ":original",
 						robot: "/video/encode",
-						result: true,
+						result: false,
 						ffmpeg_stack: "v3.3.3",
 						resize_strategy: "fit",
 						height: 100,
