@@ -39,7 +39,7 @@ class UppyComponent extends React.Component {
 						width: 150,
 					},
 					invert_watermarked: {
-						use: ":original",
+						use: "video_resized",
 						robot: "/video/encode",
 						result: true,
 						ffmpeg_stack: "v3.3.3",
