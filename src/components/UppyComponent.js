@@ -1,6 +1,5 @@
 import React from "react";
 import Uppy from "@uppy/core";
-// import Tus from "@uppy/tus";
 import Transloadit from "@uppy/transloadit";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
@@ -20,16 +19,11 @@ class UppyComponent extends React.Component {
 			autoProceed: true,
 		});
 
-		// TODO: so how do we send this to Transloadit?
-		// this.uppy.use(Tus, { endpoint: "https://master.tus.io/files/" });
-
 		this.uppy.use(Transloadit, {
 			params: {
 				auth: {
 					key: "9338010312764ec2aa950e5787982660",
 				},
-				// It’s more secure to use a template_id and enable
-				// Signature Authentication
 				steps: {
 					":original": {
 						robot: "/upload/handle",
@@ -74,7 +68,6 @@ class UppyComponent extends React.Component {
 
 		return (
 			<div>
-				{/*<Dashboard/>*/}
 				<Dashboard uppy={this.uppy} />
 			</div>
 		);
