@@ -4,7 +4,11 @@ import Transloadit from "@uppy/transloadit";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 import { Dashboard } from "@uppy/react";
+import { DashboardModal } from "@uppy/react";
+import Webcam from "@uppy/webcam";
 import "./UppyComponent.css";
+import "@uppy/core/dist/style.css";
+import "@uppy/dashboard/dist/style.css";
 
 class UppyComponent extends React.Component {
 	componentWillUnmount() {
@@ -19,10 +23,13 @@ class UppyComponent extends React.Component {
 			autoProceed: true,
 		});
 
+		this.uppy.use(Webcam); // `id` defaults to "Webcam"
+		this.uppy.use(Webcam, { id: "MyWebcam" }); // `id` is… "MyWebcam"
+
 		this.uppy.use(Transloadit, {
 			params: {
 				auth: {
-					key: "9338010312764ec2aa950e5787982660",
+					key: "d2d40be680154979a823b83262368b98",
 				},
 				steps: {
 					":original": {
@@ -68,7 +75,7 @@ class UppyComponent extends React.Component {
 
 		return (
 			<div>
-				<Dashboard uppy={this.uppy} />
+				<Dashboard plugins={["Webcam"]} uppy={this.uppy} />
 			</div>
 		);
 	}
