@@ -1,6 +1,14 @@
 .tiktok-title {
-	font-size: 80px;
-	font-style: bold;
+	display: flex;
+	width: 200px;
 	padding-bottom: 30px;
 	padding-top: 50px;
+}
+
+.button-position {
+	padding-top: 65px;
+}
+
+.icon-position {
+	padding-top: 10px;
 }

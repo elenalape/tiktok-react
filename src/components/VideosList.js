@@ -23,17 +23,13 @@ class ImagesList extends React.Component {
           <div className="ui row">
             <h2>Newest Videos</h2>
           </div>
-          <table>
-            <tbody>
-              {videos.map((video) => (
-                <tr key={video.id}>
-                  <td>
-                    <VideoItem url={video.url} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          {videos.map((video) => (
+            <div key={video.id}>
+              <div className="ui row">
+                <VideoItem url={video.url} />
+              </div>
+            </div>
+          ))}
         </div>
       </React.Fragment>
     );

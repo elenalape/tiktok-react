@@ -38,9 +38,9 @@ class UppyComponent extends React.Component {
 						result: true,
 						ffmpeg_stack: "v3.3.3",
 						resize_strategy: "fillcrop", //Sets a resize strategy which will crop to the exact dimensions specified. We have other options available
-						height: 1280,
+						height: 426,
 						preset: "ipad-high", //Presets bring a number of values over to your assembly without needing to specify them such as bit rate
-						width: 720,
+						width: 240,
 					},
 					invert_watermarked: {
 						use: "video_resized", //pipes over our resize step which we named above
@@ -52,7 +52,7 @@ class UppyComponent extends React.Component {
 						watermark_opacity: 0.7, //Value which specifes how transparent a value is
 						watermark_position: "top-right",
 						watermark_url:
-							"https://demos.transloadit.com/inputs/transloadit-padded.png",
+							"https://s16.tiktokcdn.com/tiktok/falcon/_next/static/images/logo-text-dark-673b189595b95d8bbf2ab1783ae2ab25.svg",
 					},
 				},
 			},
