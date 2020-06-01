@@ -32,32 +32,27 @@ class UppyComponent extends React.Component {
 					key: "d2d40be680154979a823b83262368b98",
 				},
 				steps: {
-					":original": {
-						robot: "/upload/handle",
-					},
 					video_resized: {
-						use: ":original",
-						robot: "/video/encode",
-						result: false,
+						use: ":original", //pipes in files uploaded from uppy
+						robot: "/video/encode", //specifies which Robot we will use
+						result: true,
 						ffmpeg_stack: "v3.3.3",
-						resize_strategy: "fit",
-						height: 100,
-						preset: "ipad-high",
-						width: 150,
+						resize_strategy: "fillcrop", //Sets a resize strategy which will crop to the exact dimensions specified. We have other options available
+						height: 1280,
+						preset: "ipad-high", //Presets bring a number of values over to your assembly without needing to specify them such as bit rate
+						width: 720,
 					},
 					invert_watermarked: {
-						use: "video_resized",
+						use: "video_resized", //pipes over our resize step which we named above
 						robot: "/video/encode",
 						result: true,
 						ffmpeg_stack: "v3.3.3",
-						height: 100,
-						resize_strategy: "fillcrop",
-						preset: "ipad-high",
-						watermark_position: "top-left",
-						watermark_size: "100%",
+						preset: "empty", //No need to bring over a preset as we are just piping over our past step.
+						watermark_size: "35%", //Size of the watermark
+						watermark_opacity: 0.7, //Value which specifes how transparent a value is
+						watermark_position: "top-right",
 						watermark_url:
-							"https://demos.transloadit.com/inputs/waterframe.png",
-						width: 150,
+							"https://demos.transloadit.com/inputs/transloadit-padded.png",
 					},
 				},
 			},

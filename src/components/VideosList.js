@@ -1,5 +1,6 @@
 import React from "react";
 import UppyComponent from "./UppyComponent";
+import VideoItem from "./VideoItem";
 
 class ImagesList extends React.Component {
   state = { videos: [] };
@@ -27,14 +28,7 @@ class ImagesList extends React.Component {
               {videos.map((video) => (
                 <tr key={video.id}>
                   <td>
-                    <video
-                      controls="controls"
-                      width="400"
-                      height="200"
-                      name="Video Name"
-                      src={video.url}
-                      type="video/mp4"
-                    ></video>
+                    <VideoItem url={video.url} />
                   </td>
                 </tr>
               ))}

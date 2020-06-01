@@ -5,8 +5,9 @@ import "./App.css";
 class App extends React.Component {
 	render() {
 		return (
-			<div className="ui container">
+			<div className="ui container center">
 				<div className="tiktok-title">TikTok</div>
+				<hr />
 				<h3>
 					Upload a video and it'll appear under Newest videos shortly.
 				</h3>
