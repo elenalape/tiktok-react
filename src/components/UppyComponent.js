@@ -54,6 +54,32 @@ class UppyComponent extends React.Component {
 						watermark_url:
 							"https://s16.tiktokcdn.com/tiktok/falcon/_next/static/images/logo-text-dark-673b189595b95d8bbf2ab1783ae2ab25.svg",
 					},
+					imported_audio: {
+						robot: "/http/import",
+						result: false,
+						url:
+							"https://demos.transloadit.com/inputs/joakim_karud-rock_angel.mp3",
+					},
+					merged: {
+						robot: "/video/merge",
+						use: {
+							steps: [
+								{
+									name: "imported_audio",
+									as: "audio",
+								},
+								{
+									name: "invert_watermarked",
+									as: "video_resized",
+								},
+							],
+							bundle_steps: true,
+						},
+						result: true,
+						framerate: "1/3",
+						ffmpeg_stack: "v3.3.3",
+						preset: "ipad-high",
+					},
 				},
 			},
 			waitForEncoding: true,

@@ -22,9 +22,7 @@ const VideoItem = (props) => {
 					<i className="comment icon"></i>3 comments
 				</div>
 				<div className="extra content">
-					<div className="ui large transparent left icon input">
-						<i className="heart outline icon"></i>
-					</div>
+					<div className="ui large transparent left icon input"></div>
 				</div>
 			</div>
 		</div>
