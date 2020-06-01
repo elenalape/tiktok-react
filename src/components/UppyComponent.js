@@ -38,9 +38,9 @@ class UppyComponent extends React.Component {
 						result: true,
 						ffmpeg_stack: "v3.3.3",
 						resize_strategy: "fillcrop", //Sets a resize strategy which will crop to the exact dimensions specified. We have other options available
-						height: 426,
+						height: 410,
 						preset: "ipad-high", //Presets bring a number of values over to your assembly without needing to specify them such as bit rate
-						width: 240,
+						width: 220,
 					},
 					invert_watermarked: {
 						use: "video_resized", //pipes over our resize step which we named above

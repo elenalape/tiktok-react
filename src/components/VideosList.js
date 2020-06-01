@@ -25,9 +25,11 @@ class ImagesList extends React.Component {
           </div>
           {videos.map((video) => (
             <div className="ui row">
-              <div key={video.id}>
-                <div className="ui row">
-                  <VideoItem url={video.url} />
+              <div className="four wide column">
+                <div key={video.id}>
+                  <div className="">
+                    <VideoItem url={video.url} />
+                  </div>
                 </div>
               </div>
             </div>
