@@ -2,7 +2,9 @@
 
 Welcome! In this workshop, we're going to be building a simple [TikTok](https://tiktok.com) clone using [React](https://reactjs.org/) (a front-end javascript framework), [Uppy](https://uppy.io) (an open source file uploader) and [Transloadit](https://transloadit.com) (a file processing service).
 
-The goal of this webinar is to give you a basic understand of how apps like TikTok and Instagram handle things on the other side of the screen — apply filters, watermarks, audio tracks etc. We'll also be looking into basic concepts of React, as well as how to style your application.
+![](tiktok-480.gif)
+
+The goal of this webinar is to give you a basic understand of how apps like TikTok and Instagram might handle things on the other side of the screen — apply filters, watermarks, audio tracks etc — step by step. We'll also be looking into basic concepts of React, as well as how to style your application.
 
 ## What you'll need
 
