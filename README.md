@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TikTok Clone
 
-## Available Scripts
+Welcome! In this workshop, we're going to be building a simple TikTok clone using React (a front-end javascript framework), Uppy (an open source file uploader) and Transloadit (a file processing service).
 
-In the project directory, you can run:
+The goal of this webinar is to give you a basic understand of how apps like TikTok and Instagram handle things on the back-end — apply filters, watermarks, audio tracks etc. We'll also be looking into basic concepts of React, as well as how to style your application.
 
-### `yarn start`
+## What you'll need
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. A text editor — check out [Sublime](https://www.sublimetext.com/) or [VSCode](https://code.visualstudio.com/).
+2. A browser with developer tools (that would allow you to _Inspect Element_), such as Firefox or Chrome.
+3. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed (optional, but most definitely not required: [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)).
+4. [React and React-DOM](https://www.codecademy.com/articles/react-setup-i) libraries installed.
+5. A [Transloadit](https://transloadit.com) account with a verified email address — you will have to get your API key from there.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If you have done all of the above, you should be able to download this repository, open the command line/command prompt, navigate to the project directory, then
 
-### `yarn test`
+```console
+foo@bar:~$ npm install
+foo@bar:~$ npm start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+or, with yarn
 
-### `yarn build`
+```console
+foo@bar:~$ yarn install
+foo@bar:~$ yarn start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+will run the app in the development mode.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+Note: if you have downlaoded this repository and want to run it on your own machine, navigate to `src/UppyComponent.js` and replace `REACT_APP_TRANSLOADIT_API` in
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+this.uppy.use(Transloadit, {
+			params: {
+				auth: {
+					key: process.env.REACT_APP_TRANSLOADIT_API,
+				},
+			}
+		}
+		)
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+with your API key as a string that you generated from Transloadit, like so
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+key: "12345678956776658798",
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## What is React?
 
-## Learn More
+From Wikipedia,
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> React is an open-source JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Basically, it's the magic that ensures that when you scroll through Facebook, the page doesn't reload.
 
-### Code Splitting
+## What is Uppy?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+An open-source file uploader that we'll use as a means of transport to send the videos you take with your webcam directly to Transloadit.
 
-### Analyzing the Bundle Size
+## What is Transloadit?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+A file processing services. It takes your images, documents, or, in our case — videos — and applies all sorts of good things to them. Watermarks, filters, music tracks.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If you have any questions, please feel free to create an Issue in this repository, or get in touch directly!
