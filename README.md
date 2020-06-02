@@ -15,7 +15,8 @@ The goal of this webinar is to give you a basic understand of how apps like TikT
 3. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed (recommended, but most definitely not required: [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)).
 4. [React and React-DOM](https://www.codecademy.com/articles/react-setup-i) libraries installed.
 5. A [Transloadit](https://transloadit.com) account with a verified email address — you will be able to create an application and get your API key from there.
-6. This link for styles: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
+6. Install uppy dependencies by running `npm install @uppy/core  @uppy/dashboard @uppy/react @uppy/transloadit @uppy/webcam`.
+7. This link for styles: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
 
 To check that you've installed everything correctly, run ```npx create-react-app my-app``` in the terminal, where `my-app` is a name you can specify. This will create a template React application.
 
