@@ -80,8 +80,8 @@ Links for static files used in the tutorial:
 - Stylesheets: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
 - Favicon (the little image you can see in the tab title): https://s16.tiktokcdn.com/tiktok/falcon/_next/static/images/logo-dark-e95da587b6efa1520dcd11f4b45c0cf6.svg
 - TikTok logo: https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/1280px-TikTok_logo.svg.png
+- Avatar placeholder: https://www.shareicon.net/data/256x256/2016/09/05/825143_user_512x512.png
 
 ---
 
 If you have any questions, please feel free to create an Issue in this repository, or get in touch directly!
-- Avatar placeholder: https://www.shareicon.net/data/256x256/2016/09/05/825143_user_512x512.png
