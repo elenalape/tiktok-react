@@ -10,9 +10,10 @@ The goal of this webinar is to give you a basic understand of how apps like TikT
 
 1. A text editor — check out [Sublime](https://www.sublimetext.com/) or [VSCode](https://code.visualstudio.com/).
 2. A browser with developer tools (that would allow you to _Inspect Element_), such as Firefox or Chrome.
-3. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed (optional, but most definitely not required: [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)).
+3. [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed (recommended, but most definitely not required: [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)).
 4. [React and React-DOM](https://www.codecademy.com/articles/react-setup-i) libraries installed.
 5. A [Transloadit](https://transloadit.com) account with a verified email address — you will be able to create an application and get your API key from there.
+6. This link for styles: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
 
 If you have done all of the above, you should be able to download this repository, open the command line/command prompt, navigate to the project directory, then
 
