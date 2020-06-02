@@ -4,7 +4,6 @@ import Transloadit from "@uppy/transloadit";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 import { Dashboard } from "@uppy/react";
-import { DashboardModal } from "@uppy/react";
 import Webcam from "@uppy/webcam";
 import "./UppyComponent.css";
 import "@uppy/core/dist/style.css";
@@ -42,17 +41,28 @@ class UppyComponent extends React.Component {
 						preset: "ipad-high", //Presets bring a number of values over to your assembly without needing to specify them such as bit rate
 						width: 220,
 					},
+					"encode-grayscale": {
+						use: "video_resized",
+						robot: "/video/encode",
+						result: true,
+						ffmpeg_stack: "v3.3.3",
+						preset: "empty",
+						ffmpeg: {
+							//FFMpeg allows for custom features and specifications to be applied. It is what we use behind the scenes for many of our bots
+							vf: "hue=s=0", //Converts video to grayscale
+						},
+					},
 					invert_watermarked: {
-						use: "video_resized", //pipes over our resize step which we named above
+						use: "encode-grayscale", //pipes over our resize step which we named above
 						robot: "/video/encode",
 						result: true,
 						ffmpeg_stack: "v3.3.3",
 						preset: "empty", //No need to bring over a preset as we are just piping over our past step.
-						watermark_size: "35%", //Size of the watermark
+						watermark_size: "50%", //Size of the watermark
 						watermark_opacity: 0.7, //Value which specifes how transparent a value is
 						watermark_position: "top-right",
 						watermark_url:
-							"https://s16.tiktokcdn.com/tiktok/falcon/_next/static/images/logo-text-dark-673b189595b95d8bbf2ab1783ae2ab25.svg",
+							"https://i.pinimg.com/originals/79/1b/54/791b5416c8ac2265c13070d1cc5914bf.png",
 					},
 					imported_audio: {
 						robot: "/http/import",
