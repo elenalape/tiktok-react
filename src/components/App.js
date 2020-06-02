@@ -9,14 +9,19 @@ class App extends React.Component {
 				<div className="ui two column grid">
 					<div className="row">
 						<div className="eleven wide column">
-							<div className="tiktok-title">
+							<div style={{
+						display: "flex",
+						width: "200px",
+						paddingBottom: "30px",
+						paddingTop: "50px",
+					}}>
 								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/1280px-TikTok_logo.svg.png" />
 							</div>
 						</div>
 						<div className="one wide column button-position">
-							<i className="cloud upload icon large icon-position"></i>
+							<i className="cloud upload icon large" style={{paddingTop: "10px"}}></i>
 						</div>
-						<div className="three wide column button-position">
+						<div className="three wide column" style={{paddingTop: "65px"}}>
 							<button className="ui button large pink">
 								Log in
 							</button>
