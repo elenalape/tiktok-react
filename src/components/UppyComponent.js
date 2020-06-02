@@ -28,7 +28,7 @@ class UppyComponent extends React.Component {
 		this.uppy.use(Transloadit, {
 			params: {
 				auth: {
-					key: "d2d40be680154979a823b83262368b98",
+					key: process.env.REACT_APP_TRANSLOADIT_API,
 				},
 				steps: {
 					video_resized: {
