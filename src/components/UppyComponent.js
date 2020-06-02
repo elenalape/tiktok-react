@@ -5,7 +5,6 @@ import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 import { Dashboard } from "@uppy/react";
 import Webcam from "@uppy/webcam";
-import "./UppyComponent.css";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 
