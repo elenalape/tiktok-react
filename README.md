@@ -15,7 +15,9 @@ The goal of this webinar is to give you a basic understand of how apps like TikT
 5. A [Transloadit](https://transloadit.com) account with a verified email address — you will be able to create an application and get your API key from there.
 6. This link for styles: https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
 
-If you have done all of the above, you should be able to download this repository, open the command line/command prompt, navigate to the project directory, then
+To check that you've installed everything correctly, run ```npx create-react-app my-app``` in the terminal, where `my-app` is a name you can specify. This will create a template React application.
+
+If you have done all of the above, you should also be able to download this repository, open the command line/command prompt, navigate to the project directory, then
 
 ```console
 foo@bar:~$ npm install
